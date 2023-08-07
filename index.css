@@ -1,0 +1,436 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#title-slogan {
+  z-index: -100;
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#main-image-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: blue;
+  z-index: -1;
+}
+
+.main-food-image {
+  width: 100%;
+  max-height: 100%;
+  background-size: cover;
+}
+
+#title {
+  background: linear-gradient(
+    to bottom,
+    #cfc09f 22%,
+    #634f2c 24%,
+    #cfc09f 26%,
+    #cfc09f 27%,
+    #ffecb3 40%,
+    #634f2c 78%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  transition: 500ms;
+  margin-bottom: 25px;
+}
+
+#slogan {
+  color: white;
+  transition: 500ms;
+  font-size: 20px;
+  font-family: "Dancing Script", cursive;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+#reservation {
+  width: 160px;
+  height: 40px;
+  background-color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 18px;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#reservation:hover {
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+#navigation {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  background-color: #111111;
+}
+
+#full-size-menu {
+  display: none;
+  background-color: white;
+}
+
+.full-size-list-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: 400ms;
+}
+
+.full-size-list-item:hover {
+  color: gray;
+}
+
+#full-size-list {
+  display: flex;
+  list-style: none;
+  width: 450px;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  background-color: #222222;
+  margin-top: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+}
+
+#hamburger-icon {
+  color: tan;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 10px;
+}
+
+#hamburger-icon.hide {
+  color: white;
+}
+
+#hamburger-icon:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+#hamburger-dropdown {
+  position: absolute;
+  width: 50vw;
+  height: 290px;
+  transition: 500ms;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+  border-radius: 0 20px 20px 0;
+}
+
+#hamburger-dropdown.hide {
+  margin-left: -500px;
+  margin-right: 0;
+}
+
+#dropdown-list {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  background-color: white;
+  padding-left: 0;
+  font-family: "Dancing Script", cursive;
+  border-radius: 0 20px 20px 0;
+}
+
+.dropdown-list-item {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-link {
+  width: 80%;
+  cursor: pointer;
+  color: black;
+}
+
+#about {
+  width: 90vw;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#about-title {
+  font-family: "Dancing Script", cursive;
+}
+
+#about-message {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+#photos {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+#photos-title {
+  font-family: "Dancing Script", cursive;
+}
+
+#photo-holder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 15px 15px;
+  margin-bottom: 30px;
+}
+
+.foodPhoto {
+  width: 240px;
+  height: 175px;
+}
+
+#hours {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+#location {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+  flex: 1;
+}
+
+#times {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  flex: 1;
+}
+
+#social-media {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: 20px 12px;
+  flex: 1;
+}
+
+svg {
+  transition: 400ms;
+}
+
+svg:hover {
+  cursor: pointer;
+  color: gray;
+}
+.info {
+  margin: 5px;
+  text-align: center;
+}
+
+#page-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  transition: opacity 2000ms;
+}
+
+#page-modal.modal {
+  opacity: 0;
+  display: none;
+}
+
+#modal-popup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 340px;
+  height: 340px;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 23px;
+  padding: 0.75em;
+  font-family: "Robotica", sans-serif;
+}
+
+#close {
+  font-size: 23px;
+  cursor: pointer;
+  transition: 400ms;
+  text-align: right;
+  padding-right: 2px;
+}
+
+#close:hover {
+  color: gray;
+}
+
+#modal-input {
+  width: 220px;
+  height: 30px;
+  font-size: 80%;
+  margin-bottom: 10px;
+  padding-left: 0.5em;
+}
+
+#modal-button {
+  width: 120px;
+  height: 35px;
+  font-family: "Dancing Script", cursive;
+  font-size: 100%;
+  color: white;
+  background-color: black;
+  text-align: center;
+  vertical-align: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (width > 700px) {
+  #modal-popup {
+    width: 380px;
+    height: 380px;
+    font-size: 26px;
+  }
+
+  #modal-input {
+    width: 240px;
+  }
+
+  #modal-button {
+    width: 130px;
+  }
+
+  .close {
+    margin-bottom: 20px;
+  }
+
+  #hamburger-icon {
+    display: none;
+  }
+
+  #hamburger-dropdown {
+    display: none;
+  }
+
+  #about {
+    width: 85vw;
+  }
+
+  #photos {
+    margin-top: 50px;
+  }
+
+  #full-size-menu {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    background-color: #222222;
+  }
+
+  #title {
+    font-size: 50px;
+  }
+
+  #slogan {
+    font-size: 25;
+    margin-bottom: 2rem;
+  }
+
+  #main-image-div {
+    flex-direction: row;
+    top: 25rem;
+  }
+
+  .main-food-image {
+    width: 33.3%;
+  }
+
+  #hours {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media (width > 1000px) {
+  #title {
+    font-size: 60px;
+  }
+
+  #slogan {
+    font-size: 28px;
+  }
+
+  #reservation {
+    width: 200px;
+    height: 40px;
+    font-size: 22px;
+  }
+}
